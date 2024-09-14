@@ -60,3 +60,21 @@
     transform: translateX(0);
   }
 }  */
+
+
+
+/* @media only screen and (max-width: 640px){
+  .custom-box{
+    width: 30px;
+    margin-left: 29%;
+  }
+} */
+
+
+
+.card1{
+  background-image: url(../../assets/chatroombg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+}

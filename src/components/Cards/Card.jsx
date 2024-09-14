@@ -1,16 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useSpring, animated } from '@react-spring/web';
-
-function Card(props) {
+import './Card.css';
+import video1 from '../../assets/chatroom.mp4'
+import video2 from '../../assets/livestreamvid.mp4'
+import video3 from '../../assets/channelvid.mp4';
+import video4 from '../../assets/postimg.jpg'
+import video5 from '../../assets/monitizevid.mp4'
+function Card() {
   const customBoxStyle = {
     backgroundColor: "black",
     borderRadius: '50px',
     border: '5px solid rgba(255, 255, 255, 0.2)',
     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
-    width: '80vw',
+    width: '60vw',
+    padding: '10px',
     margin: '60px auto 20px auto',
-    minWidth: '350px',
+    minWidth: '300px',
     overflow: 'hidden',
   };
 
@@ -21,18 +27,18 @@ function Card(props) {
   };
 
   const rightSideStyle = {
-    padding: '5%',
+    padding: '2%',
   };
 
   const headingStyle = {
-    fontSize: '1.75rem',
+    fontSize: '1.15rem',
     fontWeight: 'bold',
     textTransform: 'uppercase',
     marginTop: '10px',
   };
 
   const paragraphStyle = {
-    fontSize: '1.25rem',
+    fontSize: '.85rem',
     fontWeight: 'bold',
   };
 
@@ -45,16 +51,16 @@ function Card(props) {
   
   return (
     <>
-      <div className='container-fluid'>
+      <div className='container-fluid bg-black'>
         <div className="container-fluid text-white d-flex justify-content-center align-items-center">
           <div className="d-flex items-center justify-center">
             <animated.div
               className="custom-box d-flex flex-column flex-md-row overflow-hidden rounded-xl"
-              style={{ ...customBoxStyle, ...slideIn }} // Apply slideIn animation here
+              style={{ ...customBoxStyle, ...slideIn }}
             >
-              <div className="left-side col-md-6 p-4 d-flex items-center justify-center">
+              <div className="left-side col-md-6 p-3 d-flex items-center justify-center">
                 <video
-                  src="https://marketplace.canva.com/EAF2aHqimc8/2/0/800w/canva-tPIuA_H9drs.mp4"
+                  src={video1}
                   style={videoStyle}
                   autoPlay
                   loop
@@ -64,7 +70,7 @@ function Card(props) {
                 <div>
                   <h2 style={headingStyle}>Engage in Real-Time Conversations!</h2>
                   <p className="lead pt-4" style={paragraphStyle}>
-                  Step into our chat room and engage in real-time discussions with ease. Whether you need help or want to share ideas, our platform offers instant, interactive communication. Enjoy seamless conversations at your convenience!                  </p>
+                  Join our chat room for real-time discussions and instant support. Share ideas and enjoy seamless conversations anytime!                  </p>
                 </div>
               </div>
             </animated.div>
@@ -83,15 +89,15 @@ function Card(props) {
             >
               <div className="right-side col-md-6 d-flex items-center justify-center" style={rightSideStyle}>
                 <div>
-                  <h2 style={headingStyle}>Stream like you’re in the same room</h2>
+                  <h2 style={headingStyle}>Experience Seamless Live Streaming</h2>
                   <p className="lead pt-4 font-semibold" style={paragraphStyle}>
-                    High quality and low latency streaming makes it feel like you're hanging out on the couch with friends while playing a game, watching shows, looking at photos, or idk doing homework or something.
+                  Join the world of live streaming with ease. Share your moments in real-time and engage with your audience instantly.
                   </p>
                 </div>
               </div>
-              <div className="left-side col-md-6 p-4 d-flex justify-content-center align-items-center">
+              <div className="left-side col-md-6 p-3 d-flex justify-content-center align-items-center">
                 <video
-                  src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2%2F665434315cbc60da2d4c9684_Discord_Website_Refresh_Same%20Room_EN_V2-transcode.mp4"
+                  src={video2}
                   style={videoStyle}
                   autoPlay
                   loop
@@ -109,7 +115,7 @@ function Card(props) {
             >
               <div className="left-side col-md-6 p-4 d-flex justify-content-center align-items-center">
                 <video
-                  src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6638c6b04eff56a99c1e2d7d_Discord_Website_Refresh_Hop-In-transcode.mp4"
+                src={video3}
                   style={videoStyle}
                   autoPlay
                   loop
@@ -117,9 +123,9 @@ function Card(props) {
               </div>
               <div className="right-side col-md-6 d-flex items-center justify-center" style={rightSideStyle}>
                 <div>
-                  <h2 style={headingStyle} className='max-sm:text-center'>Hop in when you're free, no need to call</h2>
+                  <h2 style={headingStyle} className='max-sm:text-center'>Create Custom Channels on StreamNest</h2>
                   <p className="lead pt-4" style={paragraphStyle}>
-                    Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session.
+                  StreamNest lets you create personalized channels for different topics and groups. Organize your conversations and keep everything in one place easily.
                   </p>
                 </div>
               </div>
@@ -139,15 +145,15 @@ function Card(props) {
             >
               <div className="right-side col-md-6 d-flex items-center justify-center" style={rightSideStyle}>
                 <div>
-                  <h2 style={headingStyle}>See who's around to chill</h2>
+                  <h2 style={headingStyle}>Share Images Seamlessly on StreamNest</h2>
                   <p className="lead pt-4" style={paragraphStyle}>
-                    See who's around, playing games, or just hanging out. For supported games, you can see what modes or characters your friends are playing and directly join up.
+                  With StreamNest, you can easily share images in your chat rooms. Stay connected and express yourself visually with just a few clicks.
                   </p>
                 </div>
               </div>
               <div className="left-side col-md-6 p-4 d-flex justify-content-center align-items-center">
                 <video
-                  src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6638c7e8907412911166f683_Discord_Website_Refresh_See%20Who_s%20Around-transcode.mp4"
+                src={video4}
                   style={videoStyle}
                   autoPlay
                   loop
@@ -165,7 +171,7 @@ function Card(props) {
             >
               <div className="left-side col-md-6 p-4 d-flex justify-content-center align-items-center">
                 <video
-                  src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66446078b3e738a7c1f85e35_Discord_Website_Refresh_Activities_03-transcode.mp4"
+                src={video5}
                   style={videoStyle}
                   autoPlay
                   loop
@@ -173,10 +179,9 @@ function Card(props) {
               </div>
               <div className="right-side col-md-6 d-flex items-center justify-center" style={rightSideStyle}>
                 <div>
-                  <h2 style={headingStyle}>Hop in when you're free, no need to call</h2>
+                  <h2 style={headingStyle}>Monetize Your Channel with Ease</h2>
                   <p className="lead pt-4" style={paragraphStyle}>
-                    Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session.
-                  </p>
+                  Turn your content into revenue by monetizing your channel. Earn through ads, subscriptions, and sponsorships while growing your audience.                  </p>
                 </div>
               </div>
             </animated.div>
@@ -195,10 +200,9 @@ function Card(props) {
             >
               <div className="right-side col-md-6 d-flex items-center justify-center" style={rightSideStyle}>
                 <div>
-                  <h2 style={headingStyle}>Hop in when you're free, no need to call</h2>
+                  <h2 style={headingStyle}>Download Videos and Audio Easily</h2>
                   <p className="lead pt-4" style={paragraphStyle}>
-                    Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session.
-                  </p>
+                  Access powerful tools to download videos and audio effortlessly. Save your favorite content for offline use with just a few clicks.                  </p>
                 </div>
               </div>
               <div className="left-side col-md-6 p-4 d-flex justify-content-center align-items-center">

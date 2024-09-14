@@ -1,7 +1,8 @@
-.container-fluid{
+.content{
   background-image: url(https://th.bing.com/th/id/R.c5077d8b192096e430f9c0f85be1d2bb?rik=kdkLb9Tjvajchg&pid=ImgRaw&r=0); 
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
   
   .slide-in {
@@ -19,3 +20,4 @@
     transform: translateY(100%);
     animation: slideIn 2s forwards;
   }
+

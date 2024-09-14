@@ -5,7 +5,7 @@ import logo from '../../assets/streamnestlogo.png';
 
 const DiscordNavbar = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" className="discord-navbar" fixed="top">
+    <Navbar bg="primary" variant="dark" expand="lg" className="discord-navbar" fixed="top" vw-100 overflow-x-hidden>
       <Container>
         <Navbar.Brand href="#home" className="color-change d-flex align-items-center pr-5 fw-bold" style={{ fontSize: '20px' }}>
           <img
@@ -22,7 +22,7 @@ const DiscordNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <div className="ml-auto login-container">
             <a 
-              href="#login" 
+              href="http://localhost:5173/" 
               className="login-link bg-white text-black">
               Login
             </a>
